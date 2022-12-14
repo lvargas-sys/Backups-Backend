@@ -13,8 +13,7 @@ namespace tsmxbackendStorage.Controllers
         public DispositivoController(IDispositivoRepository deviceRepo)
         {
             _deviceRepo = deviceRepo;
-
-        }
+}
 
         [HttpGet]
         public async Task<IActionResult> getDevices()

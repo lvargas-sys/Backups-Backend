@@ -32,7 +32,7 @@ namespace tsmxbackendStorage.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> createCustomers(Cliente dataCliente) 
+        public async Task<IActionResult> createCustomer(Cliente dataCliente) 
         {
             try
             {
