@@ -39,30 +39,6 @@ namespace tsmxbackendStorage.Repository
             }
         }
 
-        /*
- {
-  "id_cliente": 5,
-  "id_dispositvo": 1,
-  "backup_client_name": "NMXDHLSP07GLPXP-BKP",
-  "job_id": "43105",
-  "policy": "DHL_Oracle_DB",
-  "type": "dispositivo",
-  "schedule": "Arch_10_AM",
-  "start_datetime": "2022-12-03T03:50:09.521Z",
-  "status": "Done",
-  "end_datetime": "2022-12-03T03:50:09.521Z",
-  "elapsed_time": "2022-12-03T03:50:09.521Z",
-  "last_reading_at": "2022-12-03T03:50:09.521Z",
-  "updated_at": "2022-12-03T03:50:09.521Z"
-}
-
-
-        axios
-  .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-  .then(response => (this.info = response.data.bpi))
-        
-         
-         */
 
         public async Task<bool> createJob(JobLog dataJob)
         {
