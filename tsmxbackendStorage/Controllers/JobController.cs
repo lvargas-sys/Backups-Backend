@@ -47,5 +47,22 @@ namespace tsmxbackendStorage.Controllers
 
         }
 
+        [HttpGet]
+        [Route("{status}")]
+        public async Task<IActionResult> getStatusJob(string status)
+        {
+            try
+            {
+                var customer = await _jobRepo.getJobStatus(status);
+                return Ok(customer);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                return StatusCode(500, ex.Message);
+            }
+
+        }
+
     }
 }

@@ -5,7 +5,8 @@ namespace tsmxbackendStorage.Contracts
     public interface ICustomerRepository
     {
         public Task<IEnumerable<Cliente>> getCustomers();
-        public Task<int> createCustomers(Cliente dataCliente);
+        public Task<IEnumerable<Cliente>> getCustomerIdCliente(int id_cliente);
+        public Task<bool> createCustomers(Cliente dataCliente);
 
      
     }

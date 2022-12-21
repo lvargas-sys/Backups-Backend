@@ -40,6 +40,28 @@ namespace tsmxbackendStorage.Repository
         }
 
 
+        public async Task<IEnumerable<JobLog>> getJobStatus(string status)
+        {
+            var query = "SELECT * FROM  log_job  where status = '"+status+"'";
+
+            using (var connection = _context.CreateConnection())
+            {
+                try
+                {
+                    var job = await connection.QueryAsync<JobLog>(query);
+                    return job.ToList();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    return null;
+                }
+
+            }
+
+        }
+
+
         public async Task<bool> createJob(JobLog dataJob)
         {
 

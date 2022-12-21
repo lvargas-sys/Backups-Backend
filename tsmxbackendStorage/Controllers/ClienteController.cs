@@ -47,6 +47,27 @@ namespace tsmxbackendStorage.Controllers
 
         }
 
+        [HttpGet]
+        [Route("{idCliente}")]
+        public async Task<IActionResult> getCustomerIdCliente(int idCliente)
+        {
+            try
+            {
+                var customer = await _customerRepo.getCustomerIdCliente(idCliente);
+                return Ok(customer);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                return StatusCode(500, ex.Message);
+            }
+
+        }
+
+
+
+        
+
 
 
     }
