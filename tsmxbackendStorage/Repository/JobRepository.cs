@@ -26,10 +26,7 @@ namespace tsmxbackendStorage.Repository
                 try
                 {
                     var job = await connection.QueryAsync<JobLog>(query);
-
-                    //List<object> objs = ((IEnumerable)obj).Cast<object>().ToList();
                     return job.ToList();
-                    //return ((job).Cast<JobLog>().ToList());
                 }
                 catch (Exception ex) {
                     Console.WriteLine(ex.ToString());

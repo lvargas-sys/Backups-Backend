@@ -17,15 +17,8 @@ namespace tsmxbackendStorage.Context
         }
         public IDbConnection CreateConnection()
             => new MySqlConnection(_connectionString);
-       
+        public IDbConnection ConeccionCreada()=> new MySqlConnection(_connectionString);
 
-          /*public DapperContext(): base(GetRDSConnectionString())
-          {
 
-          }
-          public static DapperContext Create()
-          {
-              return new DapperContext();
-          }*/
     }
 }

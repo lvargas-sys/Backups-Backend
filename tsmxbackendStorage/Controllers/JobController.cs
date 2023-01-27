@@ -31,7 +31,7 @@ namespace tsmxbackendStorage.Controllers
             }
         }
 
-        [HttpPost]
+     /*   [HttpPost]
         public async Task<IActionResult> createJob(JobLog dataJob)
         {
             try
@@ -45,7 +45,7 @@ namespace tsmxbackendStorage.Controllers
                 return StatusCode(500, ex.Message);
             }
 
-        }
+        }*/
 
         [HttpGet]
         [Route("{status}")]

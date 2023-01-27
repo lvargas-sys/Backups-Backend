@@ -41,7 +41,6 @@ namespace tsmxbackendStorage.Repository
 
             using (var connection = _context.CreateConnection())
             {
-                // var cliente = await connection.ExecuteAsync(query,parameters);
 
                 try
                 {
@@ -59,9 +58,6 @@ namespace tsmxbackendStorage.Repository
                     return false;
                 }
 
-
-
-                // return cliente.ToString();
 
             }
         }
